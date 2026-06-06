@@ -261,9 +261,19 @@ exam). Rank : 30 among all 1559 Master's students in France.</B></LI>
   <section>
  <p>Nombre de visites :</p>
 
-<img
-  src="https://www.hitwebcounter.com/counter/counter.php?page=21502584&style=0006&nbdigits=5&type=page"
-  alt="Compteur de visites">
+<?php
+$fichier = "compteur.txt";
+
+$compteur = file_exists($fichier)
+    ? (int)file_get_contents($fichier)
+    : 0;
+
+$compteur++;
+
+file_put_contents($fichier, $compteur);
+
+echo "Nombre de visites : " . $compteur;
+?>
   
 </section>
 </main>
