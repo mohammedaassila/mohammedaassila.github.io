@@ -9,7 +9,7 @@
   gtag('js', new Date());
 
   gtag('config', 'G-L44K7JY15H');
-</script>    
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
@@ -109,6 +109,29 @@ footer{
     font-size:1.1rem;
     font-weight:bold;
 }
+
+.photo-container {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+}
+
+.photo-container img {
+    width: 300px;
+    height: 300px;
+    object-fit: contain;
+}
+
+@media (max-width: 600px) {
+    .photo-container {
+        flex-direction: column;
+    }
+  
+    .photo-container img {
+        margin-left: auto;
+        margin-right: auto;
+    }
+}
 </style>
 </head>
 
@@ -122,30 +145,31 @@ footer{
 
 <section>
     <h2>About:</h2>
+    
+    <div class="photo-container">
 
-<UL>
-</A><B><LI><B>I am a Mathematics Professor. I completed my PhD in Mathematics at <A HREF="https://irma.math.unistra.fr/">Strasbourg University</A> (Obtained with the highest distinctions : très honorable avec félicitations du jury). «Very Honorable, with Committee Praise » is the highest academic distinction awarded for doctorates in the French academic system. The félicitations du jury are an exceptional distinction, requiring a positive secret vote by the Committee and a special memo to be written by the Committee Chairperson to justify this honor.</B></LI>
-</A><LI><B> I was a  postdoc at the <A HREF="https://www.crmath.ca/en/">University of Montreal</A> (Canada). </B></LI>
-</A><LI><B> I was an <A HREF="https://www.humboldt-foundation.de/en/">Alexander von Humboldt Fellow</A> at the <A HREF="https://math-cs.uni-koeln.de/">University of Köln</A> (Germany).</B></LI>
-</A><LI><B> I was an Assistant Professor of Mathematics at the <A HREF="https://www.unifr.ch/math/en/">University of Fribourg</A> (Switzerland). </B></LI>
- <LI><B> I hold the French <A HREF="https://fr.wikipedia.org/wiki/Agr%C3%A9gation_de_math%C3%A9matiques">agrégation in mathematics</A> (French advanced teaching qualification
-exam). Rank : 30 among all 1559 Master's students in France.</B></LI>
-<LI><B> I hold a Master's degree in <A HREF="https://icube.unistra.fr/">Computer Science</A> from Strasbourg University.</B></LI>
-<P>
-</P></UL>
+        <img src="photo.png" />
+
+        <UL>
+        <LI><B>I am a Mathematics Professor. I completed my PhD in Mathematics at <A HREF="https://irma.math.unistra.fr/">Strasbourg University</A> (Obtained with the highest distinctions : très honorable avec félicitations du jury). «Very Honorable, with Committee Praise » is the highest academic distinction awarded for doctorates in the French academic system. The félicitations du jury are an exceptional distinction, requiring a positive secret vote by the Committee and a special memo to be written by the Committee Chairperson to justify this honor.</B></LI>
+        <LI><B>I was a  postdoc at the <A HREF="https://www.crmath.ca/en/">University of Montreal</A> (Canada). </B></LI>
+        <LI><B>I was an <A HREF="https://www.humboldt-foundation.de/en/">Alexander von Humboldt Fellow</A> at the <A HREF="https://math-cs.uni-koeln.de/">University of Köln</A> (Germany).</B></LI>
+        <LI><B>I was an Assistant Professor of Mathematics at the <A HREF="https://www.unifr.ch/math/en/">University of Fribourg</A> (Switzerland). </B></LI>
+        <LI><B>I hold the French <A HREF="https://fr.wikipedia.org/wiki/Agr%C3%A9gation_de_math%C3%A9matiques">agrégation in mathematics</A> (French advanced teaching qualification exam). Rank : 30 among all 1559 Master's students in France.</B></LI>
+        <LI><B>I hold a Master's degree in <A HREF="https://icube.unistra.fr/">Computer Science</A> from Strasbourg University.</B></LI>
+    </UL>
+
+    </div>
 </section>
 
 <section>
     <h2>Fields of interest:</h2>
 
-<UL>
-<LI><B><FONT COLOR="#000000"><A HREF="https://en.wikipedia.org/wiki/Partial_differential_equation">Partial Differential Equations</A>, </FONT></B></LI>
-
-<LI><B><FONT COLOR="#000000"><A HREF="https://en.wikipedia.org/wiki/Controllability">Control Theory</A>, </FONT></B></LI>
-
-
-<LI><B><FONT COLOR="#000000"><A HREF="https://en.wikipedia.org/wiki/List_of_mathematics_competitions">Mathematics Competitions</A>.</FONT></B></LI>
-</UL>
+    <UL>
+    <LI><B><A HREF="https://en.wikipedia.org/wiki/Partial_differential_equation">Partial Differential Equations</A>,</B></LI>
+    <LI><B><A HREF="https://en.wikipedia.org/wiki/Controllability">Control Theory</A>,</B></LI>
+    <LI><B><A HREF="https://en.wikipedia.org/wiki/List_of_mathematics_competitions">Mathematics Competitions</A>.</B></LI>
+    </UL>
 </section>
 
 <section>
@@ -153,28 +177,28 @@ exam). Rank : 30 among all 1559 Master's students in France.</B></LI>
 
     <UL>
     <LI><B> I have published more than 60 articles in international peer-reviewed journals. My <A HREF="https://www.researchgate.net/profile/Mohammed-Aassila">Researchgate profile</A>.</B></LI>
-</UL>
+    </UL>
 </section>
 
 <section>
     <h2>Publications: Books</h2>
 
     <UL>
-    <LI><B> <A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">300 Défis Mathématiques</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2001.</FONT></B></LI>
-    <LI><B>  <A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">Olympiades Internationales de Mathématiques 1998-2002</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2003.</B></LI>
+    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">300 Défis Mathématiques</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2001.</B></LI>
+    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">Olympiades Internationales de Mathématiques 1998-2002</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2003.</B></LI>
     <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">350 exercices corrigés d’analyse avec rappels de cours pour sup</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2013.</B></LI>
-    <LI><B> <A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">400 exercices corrigés d’algèbre avec rappels de cours pour sup</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2013.</B></LI>
-    <LI><B> <A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">400 Exercices corrigés d’analyse pour Spé MP-MP*</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2014.</B></LI>
+    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">400 exercices corrigés d’algèbre avec rappels de cours pour sup</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2013.</B></LI>
+    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">400 Exercices corrigés d’analyse pour Spé MP-MP*</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2014.</B></LI>
     <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">400 Exercices corrigés d’algèbre pour Spé MP-MP*</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2014.</B></LI>
     <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=1000+challenges">1000 challenges mathématiques, Analyse</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2016.</B></LI>
-    <LI><B> <A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=1000+challenges">1000 challenges mathématiques, Algèbre</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2016.</B></LI>
+    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=1000+challenges">1000 challenges mathématiques, Algèbre</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2016.</B></LI>
     <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=1000+challenges">1000 challenges mathématiques, Géométrie</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2018.</B></LI>
     <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Algèbre</A>, Amazon, 2020.</B></LI>
     <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Analyse</A>, Amazon, 2020.</B></LI>
     <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Combinatoire 1</A>, Amazon, 2021.</B></LI>
-    <LI><B> <A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Combinatoire 2</A>, Amazon, 2021.</B></LI>
-    <LI><B> <A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Théorie des nombres</A>, Amazon, 2021.</B></LI>
-    <LI><B> <A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Géométrie 1</A>, Amazon, 2022.</B></LI>
+    <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Combinatoire 2</A>, Amazon, 2021.</B></LI>
+    <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Théorie des nombres</A>, Amazon, 2021.</B></LI>
+    <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Géométrie 1</A>, Amazon, 2022.</B></LI>
     <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Géométrie 2</A>, Amazon, 2022.</B></LI>
     <LI><B><A HREF="https://www.amazon.fr/dp/B0CMBJRL51?binding=paperback&qid=1780174747&sr=8-19&ref=dbs_dp_rwt_sb_pc_tpbk">Je réussis ma prépa, Algèbre 1</A>, Amazon, 2023.</B></LI>
     <LI><B><A HREF="https://www.amazon.fr/dp/B0CMBJRL51?binding=paperback&qid=1780174747&sr=8-19&ref=dbs_dp_rwt_sb_pc_tpbk">Je réussis ma prépa, Algèbre 2</A>, Amazon, 2023.</B></LI>
@@ -184,27 +208,27 @@ exam). Rank : 30 among all 1559 Master's students in France.</B></LI>
     <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">400 exercices corrigés d’algèbre, 2nd edition</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2024.</B></LI>
     <LI><B><A HREF="https://www.amazon.com/Challenges-Mathematical-Olympiads-Mohammed-AASSILA/dp/B0F93MZTKP?crid=1533OXZO2QG9D&dib=eyJ2IjoiMSJ9.KWRbUZx8zjJQJRkBuI-qU1J6Sf3advFL2LDP50ikZ5pI95KO94dnNDkBLpUrP5TfRK7Pnf0iTPNJQJsD-d1Zou_x5Fv1JwRgoc5RJlpgYxCYP7dkJpKXh3PkLh6DvaThOkcoogzDNO927HJWV7NSeOdWRhYLfJy-NTVmqcBaBkms22yYDdPrztgk2_h2j23Vj-2KQQ_DkRDCBM85qwAcH0COEsNpGNtjF_R5aZSrT3Y.adA32c3KBkDkLhwJVys1uJG8ijqKALMOWjkVQru9GFE&dib_tag=se&keywords=challenges+from+mathematical+olympiads&qid=1780216810&sprefix=challenges+from+mathematical+olympiads%2Caps%2C202&sr=8-1">
         Challenges from Mathematical Olympiads</A>, Amazon, 2025.</B></LI>
-</UL>
+    </UL>
 </section>
 
 <section>
     <h2>Mathematical Olympiad Activities</h2>
 
     <UL>
-    <LI><B> I have published more than 600 problems and/or solutions in various international problem solving oriented journals, including : 
-        <A HREF="https://maa.org/publication/the-american-mathematical-monthly/">American Mathematical Monthly</A> (United States of America), 
-        <A HREF="https://maa.org/publication/college-mathematics-journal/">College Mathematics Journal</A> (United States of America), 
-        <A HREF="https://maa.org/publication/mathematics-magazine/">Mathematics Magazine</A> (United States of America), <A HREF="https://cms.math.ca/publications/crux/">Crux Mathematicorum</A> (Canada), 
-        <A HREF="https://ems.press/journals/em">Elemente der Mathematik</A> (Switzerland), <A HREF="https://www.nieuwarchief.nl/">Nieuw Archief voor Wiskunde</A> (Netherlands), <A HREF="https://www.awesomemath.org/mathematical-reflections/">Mathematical Reflections Journal</A> (United States of America), 
-        <A HREF="https://www.math.hkust.edu.hk/excalibur/">Mathematical Excalibur</A> (Hong Kong), Math Problems Journal, Samasya (India), <A HREF="https://octogon.online/">Octogon Mathematical Magazine</A> (Romania), <A HREF="https://www.quadrature-mag.fr/">Quadrature</A> (France), <A HREF="https://afdm.apmep.fr/">Bulletin de l’APMEP</A> (France), 
+    <LI><B>I have published more than 600 problems and/or solutions in various international problem solving oriented journals, including :
+        <A HREF="https://maa.org/publication/the-american-mathematical-monthly/">American Mathematical Monthly</A> (United States of America),
+        <A HREF="https://maa.org/publication/college-mathematics-journal/">College Mathematics Journal</A> (United States of America),
+        <A HREF="https://maa.org/publication/mathematics-magazine/">Mathematics Magazine</A> (United States of America), <A HREF="https://cms.math.ca/publications/crux/">Crux Mathematicorum</A> (Canada),
+        <A HREF="https://ems.press/journals/em">Elemente der Mathematik</A> (Switzerland), <A HREF="https://www.nieuwarchief.nl/">Nieuw Archief voor Wiskunde</A> (Netherlands), <A HREF="https://www.awesomemath.org/mathematical-reflections/">Mathematical Reflections Journal</A> (United States of America),
+        <A HREF="https://www.math.hkust.edu.hk/excalibur/">Mathematical Excalibur</A> (Hong Kong), Math Problems Journal, Samasya (India), <A HREF="https://octogon.online/">Octogon Mathematical Magazine</A> (Romania), <A HREF="https://www.quadrature-mag.fr/">Quadrature</A> (France), <A HREF="https://afdm.apmep.fr/">Bulletin de l’APMEP</A> (France),
         <A HREF="https://www.rms-math.com/">Revue de Mathématiques Spéciales</A> (France).</B></LI>
-    <LI><B> Reviewer for the <A HREF="https://maa.org/book_category/problem-book/">MAA Problem book Series</A>, <A HREF="https://maa.org/">Mathematical Association of America</A>.</B></LI>
-    <LI><B> Assistant to the Editor-in-Chief of <A HREF="https://cms.math.ca/publications/crux/">Crux Mathematicorum with Mathematical Mayhem</A>, the Problem Solving Journal of 
+    <LI><B>Reviewer for the <A HREF="https://maa.org/book_category/problem-book/">MAA Problem book Series</A>, <A HREF="https://maa.org/">Mathematical Association of America</A>.</B></LI>
+    <LI><B>Assistant to the Editor-in-Chief of <A HREF="https://cms.math.ca/publications/crux/">Crux Mathematicorum with Mathematical Mayhem</A>, the Problem Solving Journal of
         the <A HREF="https://cms.math.ca/">Canadian Mathematical Society</A>  (1998-2009).</B></LI>
     <LI><B>Editor of Math Problems Journal, 2013-present.</B></LI>
     <LI><B>Author of 13 books about Mathematical Olympiads.</B></LI>
     <LI><B>Chair : Academic Committee, Gulf Mathematical Olympiad, 2016-present.</B></LI>
-</UL>
+    </UL>
 </section>
 
 <section>
@@ -214,31 +238,36 @@ exam). Rank : 30 among all 1559 Master's students in France.</B></LI>
 
         <div class="link-box">
             <h3>COMPETITIONS</h3>
+            <B>
             <A HREF="https://www.imo-official.org/">IMO</A>,   <A HREF="https://artofproblemsolving.com/community">AoPS</A><BR>
             <A HREF="https://moresults.org/">Math Olympiad Results </A><BR>
             <A HREF="https://mathnet.mit.edu/">Olympiad Problems</A> <BR>
             <A HREF="https://kskedlaya.org/putnam-archive/">Putnam</A>, <A HREF="https://vjimc.osu.cz/">VJIMC</A><BR>
-            <A HREF="https://www.imc-math.org.uk/">IMC</A>, <A HREF="https://www.georgmohr.dk/nmcperm/">Nordic</A>, <A HREF="https://www.turgor.ru/en/">TT</A>, 
-          <A HREF="https://www.math.u-szeged.hu/~mmaroti/schweitzer/">MSMC</A><BR>
+            <A HREF="https://www.imc-math.org.uk/">IMC</A>, <A HREF="https://www.georgmohr.dk/nmcperm/">Nordic</A>, <A HREF="https://www.turgor.ru/en/">TT</A>,
+            <A HREF="https://www.math.u-szeged.hu/~mmaroti/schweitzer/">MSMC</A><BR>
             <A HREF="https://www.pamoofficial.org/">PAMO</A>, <A HREF="https://bxmo.org/">BxMO</A>, <A HREF="https://www.apmo-official.org/">APMO</A><BR>
             <A HREF="https://emo2026.lt/">EMO</A>, <A HREF="https://www.memo-official.org/MEMO/">MEMO</A>, <A HREF="https://emc.mnm.hr/">EMC</A>, <A HREF="https://rmms.lbi.ro/rmm2026/index.php?id=home">RMM</A><BR>
+            </B>
         </div>
 
         <div class="link-box">
             <h3>JOURNALS</h3>
-            <A HREF="https://mathscinet.ams.org/dmr/JournalList.html">Math Journals</A>, <A HREF="https://annals.math.princeton.edu/">Annals</A>, 
-          <A HREF="https://pubs.ams.org/journals/jams/">JAMS</A><BR>
-            <A HREF="https://portail.math.cnrs.fr/doc">Periodicals</A>, <A HREF="https://link.springer.com/journal/222/volumes-and-issues">Inventiones</A>, 
-          <A HREF="https://intlpress.com/journals/journalList?id=1804409921462136833">Acta</A><BR>
+            <B>
+            <A HREF="https://mathscinet.ams.org/dmr/JournalList.html">Math Journals</A>, <A HREF="https://annals.math.princeton.edu/">Annals</A>,
+            <A HREF="https://pubs.ams.org/journals/jams/">JAMS</A><BR>
+            <A HREF="https://portail.math.cnrs.fr/doc">Periodicals</A>, <A HREF="https://link.springer.com/journal/222/volumes-and-issues">Inventiones</A>,
+            <A HREF="https://intlpress.com/journals/journalList?id=1804409921462136833">Acta</A><BR>
             <A HREF="https://arxiv.org/list/math/recent">arXiv</A>, <A HREF="https://www.numdam.org/">Numdam</A><BR>
             <A HREF="https://cms.math.ca/publications/crux/">Crux Mathematicorum</A> <BR>
             <A HREF="https://www.komal.hu/oldal?home=">Komal</A>, <A HREF="https://www.kvant.digital/">Kvant</A>, <A HREF="https://www.wfnmc.org/journal.html">WFNMC</A>  <BR>
-            <A HREF="https://ssmr.ro/publicatii/gmb/volume_gmb">Gazeta Matematica</A>, <A HREF="http://recreatiimatematice.ro/">Recreatii</A><BR> 
+            <A HREF="https://ssmr.ro/publicatii/gmb/volume_gmb">Gazeta Matematica</A>, <A HREF="http://recreatiimatematice.ro/">Recreatii</A><BR>
             <A HREF="https://gaceta.rsme.es/">Gaceta de la RSME</A><BR>
+            </B>
         </div>
 
         <div class="link-box">
             <h3>LATEX</h3>
+            <B>
             <A HREF="https://fr.overleaf.com/">Overleaf</A><BR>
             <A HREF="https://miktex.org/">MikTeX</A><BR>
             <A HREF="https://www.wolframalpha.com/examples/mathematics">WolframAlpha</A><BR>
@@ -246,22 +275,25 @@ exam). Rank : 30 among all 1559 Master's students in France.</B></LI>
             <A HREF="https://ctan.org/?utm_source=chatgpt.com">CTAN</A><BR>
             <A HREF="https://ctan.org/pkg/pgf?utm_source=chatgpt.com">Tikz PGF</A><BR>
             <A HREF="https://www.gutenberg-asso.fr/">Gutenberg</A><BR>
+            </B>
         </div>
 
         <div class="link-box">
             <h3>MATHEMATICS</h3>
+            <B>
             <A HREF="https://mathshistory.st-andrews.ac.uk/">History of Mathematics</A><BR>
             <A HREF="http://www.numbertheory.org/math_depts.html">Math. Dept. and Societies</A><BR>
             <A HREF="http://www.claymath.org">Clay Math. Institute</A><BR>
             <A HREF="https://faculty.evansville.edu/ck6/encyclopedia/etc.html">Triangle Centers </A><BR>
             <A HREF="https://oeis.org/">Integer sequences</A><BR>
-            <A HREF="https://mathoverflow.net/">MathOverflow</A><BR> 
+            <A HREF="https://mathoverflow.net/">MathOverflow</A><BR>
             <A HREF="https://math.stackexchange.com/?utm_source=chatgpt.com">Math Stack Exchange</A><BR>
+            </B>
         </div>
 
     </div>
 </section>
-  
+
 </main>
 
 <footer>
@@ -293,8 +325,8 @@ function updateClock(){
 
 setInterval(updateClock,1000);
 updateClock();
-  
+
 </script>
 
 </body>
-</html> 
+</html>
