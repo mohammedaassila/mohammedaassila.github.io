@@ -7,327 +7,492 @@
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
-
   gtag('config', 'G-L44K7JY15H');
 </script>
+
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Mohammed Aassila — Mathematics</title>
+<meta name="description" content="Mohammed Aassila, PhD in mathematics (Strasbourg): research in PDE and control theory, more than 70 articles, 600+ olympiad problems and solutions, books on mathematical olympiads and prépa.">
+<meta name="author" content="Mohammed Aassila">
+<meta property="og:title" content="Mohammed Aassila — Mathematics">
+<meta property="og:description" content="Research, books and mathematical olympiad activities.">
+<meta property="og:type" content="website">
+<meta property="og:image" content="photo.png">
 
-<title>Mohammed AASSILA Web Page</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,500;0,600;1,500&family=Source+Sans+3:wght@400;600;700&display=swap" rel="stylesheet">
 
 <style>
 :root{
-    --primary:#7c3aed;
-    --accent:#ec4899;
-    --success:#22c55e;
-    --text:#222;
-    --bg:#f8fafc;
-    --card:#ffffff;
+  --bg:#faf8f4;
+  --surface:#ffffff;
+  --ink:#1f2430;
+  --muted:#5d6474;
+  --line:#e4e0d8;
+  --accent:#1d4e89;
+  --accent-soft:#e8eef7;
+  --gold:#b08530;
+  --radius:12px;
+  --shadow:0 1px 2px rgba(0,0,0,.04),0 4px 16px rgba(0,0,0,.05);
+}
+@media (prefers-color-scheme: dark){
+  :root{
+    --bg:#14171d; --surface:#1c2028; --ink:#e7e9ee; --muted:#9aa2b1;
+    --line:#2c313c; --accent:#8db4ea; --accent-soft:#1f2a3a; --gold:#d6b264;
+    --shadow:none;
+  }
 }
 
-*{
-    margin:0;
-    padding:0;
-    box-sizing:border-box;
-}
+*{box-sizing:border-box;}
+html{scroll-behavior:smooth;}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 "Source Sans 3",system-ui,sans-serif;}
+a{color:var(--accent);text-decoration:none;}
+a:hover,a:focus-visible{text-decoration:underline;}
+h1,h2,h3{font-family:"EB Garamond",Georgia,serif;font-weight:600;line-height:1.2;}
+.wrap{max-width:1080px;margin:0 auto;padding:0 20px;}
 
-body{
-    font-family: "Segoe UI", Arial, sans-serif;
-    line-height:1.7;
-    color:var(--text);
-    background:var(--bg);
-    max-width:1200px;
-    margin:auto;
-    padding:30px;
+/* ---------- Hero ---------- */
+header.hero{
+  border-bottom:1px solid var(--line);
+  background:radial-gradient(circle at 85% 15%,var(--accent-soft),transparent 55%),var(--surface);
 }
-
-header{
-    text-align:center;
-    margin-bottom:30px;
+.hero .wrap{display:flex;align-items:center;gap:36px;padding-top:52px;padding-bottom:40px;}
+.avatar{
+  position:relative;flex:0 0 180px;height:180px;border-radius:50%;
+  background:var(--accent-soft);border:3px solid var(--surface);
+  box-shadow:0 0 0 1px var(--line),var(--shadow);overflow:hidden;
+  display:grid;place-items:center;
+  font:600 3.4rem "EB Garamond",serif;color:var(--accent);
 }
-
-header h1{
-    color:var(--success);
-    font-size:2.5rem;
+.avatar img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;}
+.hero h1{font-size:clamp(2.2rem,5vw,3.3rem);margin:0;}
+.hero .role{color:var(--muted);font-size:1.15rem;margin:.35em 0 1.1em;}
+.badges{display:flex;flex-wrap:wrap;gap:10px;}
+.badge{
+  padding:6px 14px;border:1px solid var(--line);border-radius:999px;
+  background:var(--bg);font-weight:600;font-size:.95rem;
 }
+.badge:hover{border-color:var(--accent);text-decoration:none;}
 
-section{
-    background:var(--card);
-    padding:25px;
-    margin-bottom:25px;
-    border-radius:12px;
-    box-shadow:0 4px 15px rgba(0,0,0,.08);
+/* ---------- Chiffres clés ---------- */
+.stats{display:grid;grid-template-columns:repeat(4,1fr);gap:16px;margin-top:-1px;padding:28px 0 0;}
+.stat{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);padding:16px 18px;text-align:center;box-shadow:var(--shadow);}
+.stat b{display:block;font:600 2.1rem/1.1 "EB Garamond",serif;color:var(--accent);}
+.stat span{color:var(--muted);font-size:.95rem;}
+
+/* ---------- Menu ---------- */
+nav.top{
+  position:sticky;top:0;z-index:10;
+  background:color-mix(in srgb,var(--surface) 92%,transparent);
+  backdrop-filter:blur(6px);border-bottom:1px solid var(--line);
 }
+nav.top ul{list-style:none;margin:0;padding:0;display:flex;gap:24px;overflow-x:auto;}
+nav.top a{display:block;padding:12px 0;color:var(--muted);font-weight:600;white-space:nowrap;}
+nav.top a:hover{color:var(--accent);text-decoration:none;}
 
-h2{
-    color:var(--accent);
-    margin-bottom:15px;
+/* ---------- Sections ---------- */
+main section{padding:44px 0 4px;scroll-margin-top:50px;}
+main h2{font-size:1.9rem;margin:0 0 18px;display:flex;align-items:center;gap:14px;}
+main h2::after{content:"";flex:1;height:1px;background:var(--line);}
+.card{background:var(--surface);border:1px solid var(--line);border-radius:var(--radius);box-shadow:var(--shadow);padding:22px 26px;}
+
+.timeline{list-style:none;margin:0;padding:0;}
+.timeline li{position:relative;padding:0 0 14px 26px;}
+.timeline li::before{content:"";position:absolute;left:4px;top:.6em;width:9px;height:9px;border-radius:50%;background:var(--gold);}
+.timeline li::after{content:"";position:absolute;left:8px;top:1.3em;bottom:0;width:1px;background:var(--line);}
+.timeline li:last-child::after{display:none;}
+.timeline small{color:var(--muted);}
+
+.tags{display:flex;flex-wrap:wrap;gap:10px;padding:0;margin:0;list-style:none;}
+.tags a,.tags span{display:inline-block;background:var(--accent-soft);color:var(--accent);padding:6px 14px;border-radius:8px;font-weight:600;}
+
+/* ---------- Publications choisies ---------- */
+h3.sub{margin:24px 0 12px;font-size:1.35rem;color:var(--gold);}
+ol.pubs{margin:0;padding-left:1.5em;}
+ol.pubs li{padding:8px 0 8px 4px;border-top:1px dashed var(--line);}
+ol.pubs li:first-child{border-top:0;}
+ol.pubs li::marker{color:var(--gold);font-weight:700;}
+ol.pubs .ti{font-style:italic;}
+ol.pubs .jo{color:var(--muted);}
+ol.pubs .doi{
+  display:inline-block;margin-left:6px;padding:0 8px;border:1px solid var(--line);
+  border-radius:4px;font-size:.8rem;font-weight:700;letter-spacing:.04em;vertical-align:1px;
 }
+ol.pubs .doi:hover{border-color:var(--accent);text-decoration:none;}
 
-ul{
-    padding-left:25px;
-}
+/* ---------- Livres ---------- */
+.book-grid{display:grid;gap:18px;grid-template-columns:repeat(2,1fr);}
+@media (max-width:760px){.book-grid{grid-template-columns:1fr;}}
+.book-grid h3{margin:0 0 4px;font-size:1.35rem;}
+.book-grid .pub{color:var(--muted);font-size:.95rem;margin:0 0 12px;}
+.books{list-style:none;margin:0;padding:0;}
+.books li{display:flex;justify-content:space-between;gap:12px;padding:6px 0;border-top:1px dashed var(--line);}
+.books li:first-child{border-top:0;}
+.books .y{color:var(--muted);font-variant-numeric:tabular-nums;white-space:nowrap;}
 
-li{
-    margin-bottom:10px;
-}
+/* ---------- Olympiades ---------- */
+.olymp{display:grid;gap:18px;grid-template-columns:1fr 1fr;}
+.roles{list-style:none;margin:0;padding:0;}
+.roles li{padding:8px 0;border-top:1px dashed var(--line);}
+.roles li:first-child{border-top:0;}
+.roles small{display:block;color:var(--muted);}
+.journals{display:flex;flex-wrap:wrap;gap:8px;list-style:none;margin:12px 0 0;padding:0;}
+.journals a{display:inline-block;border:1px solid var(--line);border-radius:6px;padding:3px 10px;font-size:.93rem;}
+.journals a:hover{border-color:var(--accent);text-decoration:none;}
+.journals .c{color:var(--muted);font-size:.85em;}
 
-a{
-    color:#2563eb;
-    text-decoration:none;
-}
+/* ---------- Liens ---------- */
+.search{width:100%;max-width:360px;padding:10px 14px;margin-bottom:18px;border:1px solid var(--line);border-radius:8px;background:var(--surface);color:var(--ink);font:inherit;}
+.link-grid{display:grid;gap:18px;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));}
+.link-box h3{margin:0 0 10px;font-size:1.3rem;color:var(--gold);}
+.link-box ul{list-style:none;margin:0;padding:0;}
+.link-box li{border-top:1px dashed var(--line);}
+.link-box li:first-child{border-top:0;}
+.link-box li a{display:block;padding:5px 0;font-weight:600;}
+.link-box li.hidden{display:none;}
 
-a:hover{
-    text-decoration:underline;
-}
+footer{margin-top:56px;padding:26px 0;border-top:1px solid var(--line);color:var(--muted);font-size:.95rem;}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:10px;}
+footer .visits{display:inline-flex;align-items:center;gap:6px;}
+footer .visits img{vertical-align:middle;max-height:22px;}
 
-.links-grid{
-    display:grid;
-    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
-    gap:20px;
-}
-
-.link-box{
-    border:1px solid #ddd;
-    border-radius:10px;
-    padding:15px;
-}
-
-.link-box h3{
-    margin-bottom:10px;
-    color:var(--primary);
-}
-
-footer{
-    margin-top:30px;
-    text-align:center;
-    color:#666;
-}
-
-#clock{
-    margin-top:15px;
-    font-size:1.1rem;
-    font-weight:bold;
-}
-
-.photo-container {
-    display: flex;
-    flex-direction: row;
-    gap: 1rem;
-}
-
-.photo-container img {
-    width: 300px;
-    height: 300px;
-    object-fit: contain;
-}
-
-@media (max-width: 600px) {
-    .photo-container {
-        flex-direction: column;
-    }
-  
-    .photo-container img {
-        margin-left: auto;
-        margin-right: auto;
-    }
+/* ---------- Téléphone ---------- */
+@media (max-width:760px){
+  .hero .wrap{flex-direction:column;text-align:center;gap:20px;}
+  .avatar{flex-basis:auto;width:150px;height:150px;}
+  .badges{justify-content:center;}
+  .stats{grid-template-columns:repeat(2,1fr);}
+  .olymp{grid-template-columns:1fr;}
 }
 </style>
 </head>
 
 <body>
 
-<header>
-    <h1>Welcome to Mohammed AASSILA Web Page</h1>
+<header class="hero">
+  <div class="wrap">
+    <div class="avatar" aria-hidden="true">MA
+      <img src="photo.png" alt="" onerror="this.remove()">
+    </div>
+    <div>
+      <h1>Mohammed Aassila</h1>
+      <p class="role">PhD in Mathematics (Strasbourg) · Agrégé de mathématiques<br>
+        Partial differential equations, control theory &amp; mathematical olympiads</p>
+      <div class="badges">
+        <a class="badge" href="https://www.researchgate.net/profile/Mohammed-Aassila">ResearchGate</a>
+        <a class="badge" href="https://orcid.org/0009-0007-9526-8497">ORCID</a>
+        <a class="badge" href="#books">Books</a>
+        <a class="badge" href="#olympiads">Olympiads</a>
+      </div>
+    </div>
+  </div>
 </header>
 
-<main>
+<nav class="top" aria-label="Sections">
+  <div class="wrap">
+    <ul>
+      <li><a href="#about">About</a></li>
+      <li><a href="#interests">Fields of interest</a></li>
+      <li><a href="#articles">Articles</a></li>
+      <li><a href="#books">Books</a></li>
+      <li><a href="#olympiads">Olympiads</a></li>
+      <li><a href="#links">Links</a></li>
+    </ul>
+  </div>
+</nav>
 
-<section>
-    <h2>About:</h2>
-    
-    <div class="photo-container">
+<main class="wrap">
 
-        <img src="photo.png" />
+  <div class="stats">
+    <div class="stat"><b>70+</b><span>research articles</span></div>
+    <div class="stat"><b>600+</b><span>problems &amp; solutions</span></div>
+    <div class="stat"><b>23</b><span>books</span></div>
+    <div class="stat"><b>2016–</b><span>Chair, GMO Academic Committee</span></div>
+  </div>
 
-        <UL>
-        <LI><B>I am a Mathematics Professor. I completed my PhD in Mathematics at <A HREF="https://irma.math.unistra.fr/">Strasbourg University </A> in 1997 (Obtained with the highest distinctions : très honorable avec félicitations du jury). «Very Honorable, with Committee Praise » is the highest academic distinction awarded for doctorates in the French academic system. The félicitations du jury are an exceptional distinction, requiring a positive secret vote by the Committee and a special memo to be written by the Committee Chairperson to justify this honor.</B></LI>
-        <LI><B>I was a  postdoc at the <A HREF="https://www.crmath.ca/en/">University of Montreal</A> (Canada). </B></LI>
-        <LI><B>I was an <A HREF="https://www.humboldt-foundation.de/en/">Alexander von Humboldt Fellow</A> at the <A HREF="https://math-cs.uni-koeln.de/">University of Köln</A> (Germany).</B></LI>
-        <LI><B>I was an Assistant Professor of Mathematics at the <A HREF="https://www.unifr.ch/math/en/">University of Fribourg</A> (Switzerland). </B></LI>
-        <LI><B>I hold the French <A HREF="https://fr.wikipedia.org/wiki/Agr%C3%A9gation_de_math%C3%A9matiques">agrégation in mathematics</A> (French advanced teaching qualification exam). Rank : 30 among all 1559 Master's students in France.</B></LI>
-        <LI><B>I hold a Master's degree in <A HREF="https://icube.unistra.fr/">Computer Science</A> from Strasbourg University.</B></LI>
-    </UL>
+  <section id="about">
+    <h2>About</h2>
+    <div class="card">
+      <ul class="timeline">
+        <li><b>PhD in Mathematics</b>, <a href="https://irma.math.unistra.fr/">University of Strasbourg</a>, 1997
+          — <i>très honorable avec félicitations du jury</i>.<br>
+          <small>The highest distinction for a doctorate in the French system; the félicitations require a unanimous secret vote of the committee and a written report by its chair.</small></li>
+        <li><b>Postdoctoral fellow</b>, <a href="https://www.crmath.ca/en/">University of Montreal</a> (Canada).</li>
+        <li><b><a href="https://www.humboldt-foundation.de/en/">Alexander von Humboldt Fellow</a></b>, <a href="https://math-cs.uni-koeln.de/">University of Köln</a> (Germany).</li>
+        <li><b>Assistant Professor of Mathematics</b>, <a href="https://www.unifr.ch/math/en/">University of Fribourg</a> (Switzerland).</li>
+        <li><b><a href="https://fr.wikipedia.org/wiki/Agr%C3%A9gation_de_math%C3%A9matiques">Agrégation in mathematics</a></b> (French advanced teaching qualification) — ranked 30th out of 1559 candidates.</li>
+        <li><b>Master's degree in <a href="https://icube.unistra.fr/">Computer Science</a></b>, University of Strasbourg.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="interests">
+    <h2>Fields of interest</h2>
+    <div class="card">
+      <ul class="tags">
+        <li><a href="https://en.wikipedia.org/wiki/Partial_differential_equation">Partial Differential Equations</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/Controllability">Control Theory</a></li>
+        <li><a href="https://en.wikipedia.org/wiki/List_of_mathematics_competitions">Mathematics Competitions</a></li>
+        <li><span>Elementary Number Theory</span></li>
+        <li><span>Combinatorics</span></li>
+        <li><span>Algebra</span></li>
+        <li><span>Geometry</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <section id="articles">
+    <h2>Articles</h2>
+    <div class="card">
+      <p style="margin:0">More than <b>70 articles</b> published in international peer-reviewed journals.
+      Full list on my <a href="https://www.researchgate.net/profile/Mohammed-Aassila">ResearchGate profile</a>
+      and <a href="https://orcid.org/0009-0007-9526-8497">ORCID</a>.</p>
+
+      <h3 class="sub">Selected publications</h3>
+      <!-- Remplacez chaque bloc <li> par une de vos publications.
+           Format : auteurs, titre, revue, volume (année), pages, lien DOI.
+           Pour un article sans DOI, supprimez simplement la ligne <a class="doi" ...>. -->
+      <ol class="pubs">
+        <li>
+          <span class="au">M. Aassila</span>,
+          <span class="ti">Title of the first article</span>,
+          <span class="jo">Journal Name</span> <b>Vol</b> (Year), pages.
+          <a class="doi" href="https://doi.org/10.xxxx/xxxxx">DOI</a>
+        </li>
+        <li>
+          <span class="au">M. Aassila</span>,
+          <span class="ti">Title of the second article</span>,
+          <span class="jo">Journal Name</span> <b>Vol</b> (Year), pages.
+          <a class="doi" href="https://doi.org/10.xxxx/xxxxx">DOI</a>
+        </li>
+        <li>
+          <span class="au">M. Aassila</span>,
+          <span class="ti">Title of the third article</span>,
+          <span class="jo">Journal Name</span> <b>Vol</b> (Year), pages.
+          <a class="doi" href="https://doi.org/10.xxxx/xxxxx">DOI</a>
+        </li>
+        <li>
+          <span class="au">M. Aassila</span>,
+          <span class="ti">Title of the fourth article</span>,
+          <span class="jo">Journal Name</span> <b>Vol</b> (Year), pages.
+          <a class="doi" href="https://doi.org/10.xxxx/xxxxx">DOI</a>
+        </li>
+        <li>
+          <span class="au">M. Aassila</span>,
+          <span class="ti">Title of the fifth article</span>,
+          <span class="jo">Journal Name</span> <b>Vol</b> (Year), pages.
+          <a class="doi" href="https://doi.org/10.xxxx/xxxxx">DOI</a>
+        </li>
+      </ol>
+    </div>
+  </section>
+
+  <section id="books">
+    <h2>Books</h2>
+    <div class="book-grid">
+
+      <div class="card">
+        <h3>Olympiads &amp; challenges</h3>
+        <p class="pub"><a href="https://www.editions-ellipses.fr/fr/recherche?controller=search&amp;s=aassila&amp;order=product.available_date.asc">Ellipses</a>, Paris</p>
+        <ul class="books">
+          <li><span>300 Défis Mathématiques</span><span class="y">2001</span></li>
+          <li><span>Olympiades Internationales de Mathématiques 1998–2002</span><span class="y">2003</span></li>
+          <li><span><a href="https://www.editions-ellipses.fr/fr/recherche?controller=search&amp;s=1000+challenges">1000 challenges mathématiques</a>, Analyse</span><span class="y">2016</span></li>
+          <li><span>1000 challenges mathématiques, Algèbre</span><span class="y">2016</span></li>
+          <li><span>1000 challenges mathématiques, Géométrie</span><span class="y">2018</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Objectif Olympiades de Mathématiques</h3>
+        <p class="pub"><a href="https://www.amazon.fr/dp/B096YK1XRV">Amazon</a> · 6 volumes</p>
+        <ul class="books">
+          <li><span>Algèbre</span><span class="y">2020</span></li>
+          <li><span>Analyse</span><span class="y">2020</span></li>
+          <li><span>Combinatoire 1</span><span class="y">2021</span></li>
+          <li><span>Combinatoire 2</span><span class="y">2021</span></li>
+          <li><span>Théorie des nombres</span><span class="y">2021</span></li>
+          <li><span>Géométrie 1 &amp; 2</span><span class="y">2022</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Classes préparatoires</h3>
+        <p class="pub"><a href="https://www.editions-ellipses.fr/fr/recherche?controller=search&amp;s=aassila&amp;order=product.available_date.asc">Ellipses</a>, Paris</p>
+        <ul class="books">
+          <li><span>350 exercices corrigés d'analyse avec rappels de cours pour sup</span><span class="y">2013</span></li>
+          <li><span>400 exercices corrigés d'algèbre avec rappels de cours pour sup</span><span class="y">2013</span></li>
+          <li><span>400 exercices corrigés d'analyse pour Spé MP-MP*</span><span class="y">2014</span></li>
+          <li><span>400 exercices corrigés d'algèbre pour Spé MP-MP*</span><span class="y">2014</span></li>
+          <li><span>350 exercices corrigés d'Analyse Prépas Sup, 2nd ed.</span><span class="y">2023</span></li>
+          <li><span>400 exercices corrigés d'algèbre, 2nd ed.</span><span class="y">2024</span></li>
+        </ul>
+      </div>
+
+      <div class="card">
+        <h3>Je réussis ma prépa</h3>
+        <p class="pub"><a href="https://www.amazon.fr/dp/B0CMBJRL51">Amazon</a> · 4 volumes</p>
+        <ul class="books">
+          <li><span>Algèbre 1</span><span class="y">2023</span></li>
+          <li><span>Algèbre 2</span><span class="y">2023</span></li>
+          <li><span>Analyse 1</span><span class="y">2024</span></li>
+          <li><span>Analyse 2</span><span class="y">2024</span></li>
+        </ul>
+        <h3 style="margin-top:22px">In English</h3>
+        <ul class="books">
+          <li><span><a href="https://www.amazon.com/dp/B0F93MZTKP">Challenges from Mathematical Olympiads</a></span><span class="y">2025</span></li>
+        </ul>
+      </div>
 
     </div>
-</section>
+  </section>
 
-<section>
-    <h2>Fields of interest:</h2>
-
-    <UL>
-    <LI><B><A HREF="https://en.wikipedia.org/wiki/Partial_differential_equation">Partial Differential Equations</A>,</B></LI>
-    <LI><B><A HREF="https://en.wikipedia.org/wiki/Controllability">Control Theory</A>,</B></LI>
-    <LI><B><A HREF="https://en.wikipedia.org/wiki/List_of_mathematics_competitions">Mathematics Competitions</A> (Number Theory, Combinatorics, Algebra, Geometry).</B></LI>
-    <LI><B>Elementary Number Theory.</B></LI>
-    </UL>
-</section>
-
-<section>
-    <h2>Publications: Articles</h2>
-
-    <UL>
-    <LI><B> I have published more than 70 articles in international peer-reviewed journals. My <A HREF="https://www.researchgate.net/profile/Mohammed-Aassila">Researchgate profile</A>.</B></LI>
-    </UL>
-</section>
-
-<section>
-    <h2>Publications: Books</h2>
-
-    <UL>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">300 Défis Mathématiques</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2001.</B></LI>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">Olympiades Internationales de Mathématiques 1998-2002</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2003.</B></LI>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">350 exercices corrigés d’analyse avec rappels de cours pour sup</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2013.</B></LI>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">400 exercices corrigés d’algèbre avec rappels de cours pour sup</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2013.</B></LI>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">400 Exercices corrigés d’analyse pour Spé MP-MP*</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2014.</B></LI>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">400 Exercices corrigés d’algèbre pour Spé MP-MP*</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2014.</B></LI>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=1000+challenges">1000 challenges mathématiques, Analyse</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2016.</B></LI>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=1000+challenges">1000 challenges mathématiques, Algèbre</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2016.</B></LI>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=1000+challenges">1000 challenges mathématiques, Géométrie</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2018.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Algèbre</A>, Amazon, 2020.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Analyse</A>, Amazon, 2020.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Combinatoire 1</A>, Amazon, 2021.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Combinatoire 2</A>, Amazon, 2021.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Théorie des nombres</A>, Amazon, 2021.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Géométrie 1</A>, Amazon, 2022.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B096YK1XRV?binding=paperback&qid=1780174989&sr=1-1&ref=dbs_dp_rwt_sb_pc_tpbk">Objectif Olympiades de Mathématiques, Géométrie 2</A>, Amazon, 2022.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B0CMBJRL51?binding=paperback&qid=1780174747&sr=8-19&ref=dbs_dp_rwt_sb_pc_tpbk">Je réussis ma prépa, Algèbre 1</A>, Amazon, 2023.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B0CMBJRL51?binding=paperback&qid=1780174747&sr=8-19&ref=dbs_dp_rwt_sb_pc_tpbk">Je réussis ma prépa, Algèbre 2</A>, Amazon, 2023.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B0CMBJRL51?binding=paperback&qid=1780174747&sr=8-19&ref=dbs_dp_rwt_sb_pc_tpbk">Je réussis ma prépa, Analyse 1</A>, Amazon, 2024.</B></LI>
-    <LI><B><A HREF="https://www.amazon.fr/dp/B0CMBJRL51?binding=paperback&qid=1780174747&sr=8-19&ref=dbs_dp_rwt_sb_pc_tpbk">Je réussis ma prépa, Analyse 2</A>, Amazon, 2024.</B></LI>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">350 exercices corrigés d’Analyse Prépas Sup, 2nd edition</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2023.</B></LI>
-    <LI><B><A HREF="https://www.editions-ellipses.fr/fr/recherche?controller=search&s=aassila&order=product.available_date.asc">400 exercices corrigés d’algèbre, 2nd edition</A>, <A HREF="https://www.editions-ellipses.fr/fr/">Ellipses</A>, Paris, 2024.</B></LI>
-    <LI><B><A HREF="https://www.amazon.com/Challenges-Mathematical-Olympiads-Mohammed-AASSILA/dp/B0F93MZTKP?crid=1533OXZO2QG9D&dib=eyJ2IjoiMSJ9.KWRbUZx8zjJQJRkBuI-qU1J6Sf3advFL2LDP50ikZ5pI95KO94dnNDkBLpUrP5TfRK7Pnf0iTPNJQJsD-d1Zou_x5Fv1JwRgoc5RJlpgYxCYP7dkJpKXh3PkLh6DvaThOkcoogzDNO927HJWV7NSeOdWRhYLfJy-NTVmqcBaBkms22yYDdPrztgk2_h2j23Vj-2KQQ_DkRDCBM85qwAcH0COEsNpGNtjF_R5aZSrT3Y.adA32c3KBkDkLhwJVys1uJG8ijqKALMOWjkVQru9GFE&dib_tag=se&keywords=challenges+from+mathematical+olympiads&qid=1780216810&sprefix=challenges+from+mathematical+olympiads%2Caps%2C202&sr=8-1">
-        Challenges from Mathematical Olympiads</A>, Amazon, 2025.</B></LI>
-    </UL>
-</section>
-
-<section>
-    <h2>Mathematical Olympiad Activities</h2>
-
-    <UL>
-    <LI><B>I have published more than 600 problems and/or solutions in various international problem solving oriented journals, including :
-        <A HREF="https://maa.org/publication/the-american-mathematical-monthly/">American Mathematical Monthly</A> (United States of America),
-        <A HREF="https://maa.org/publication/college-mathematics-journal/">College Mathematics Journal</A> (United States of America),
-        <A HREF="https://maa.org/publication/mathematics-magazine/">Mathematics Magazine</A> (United States of America), <A HREF="https://cms.math.ca/publications/crux/">Crux Mathematicorum</A> (Canada),
-        <A HREF="https://ems.press/journals/em">Elemente der Mathematik</A> (Switzerland), <A HREF="https://www.nieuwarchief.nl/">Nieuw Archief voor Wiskunde</A> (Netherlands), <A HREF="https://www.awesomemath.org/mathematical-reflections/">Mathematical Reflections Journal</A> (United States of America),
-        <A HREF="https://www.math.hkust.edu.hk/excalibur/">Mathematical Excalibur</A> (Hong Kong), <A HREF="https://www.mathproblems-ks.org/">Math Problems Journal</A>, Samasya (India), <A HREF="https://octogon.online/">Octogon Mathematical Magazine</A> (Romania), <A HREF="https://www.quadrature-mag.fr/">Quadrature</A> (France), <A HREF="https://afdm.apmep.fr/">Bulletin de l’APMEP</A> (France),
-        <A HREF="https://www.rms-math.com/">Revue de Mathématiques Spéciales</A> (France), <A HREF="https://www.tandfonline.com/journals/ufbq20">The Fibonacci Quarterly</A> (United States of America),
-    <A HREF="https://www.tandfonline.com/journals/tmgz20">The Mathematical Gazette</A> (United Kingdom).</B></LI>
-    <LI><B>Reviewer for the <A HREF="https://maa.org/book_category/problem-book/">MAA Problem book Series</A>, <A HREF="https://maa.org/">Mathematical Association of America</A>.</B></LI>
-    <LI><B>Assistant to the Editor-in-Chief of <A HREF="https://cms.math.ca/publications/crux/">Crux Mathematicorum with Mathematical Mayhem</A>, the Problem Solving Journal of
-        the <A HREF="https://cms.math.ca/">Canadian Mathematical Society</A>  (1998-2009).</B></LI>
-    <LI><B>Editor of <A HREF="https://www.mathproblems-ks.org/">Math Problems Journal</A>, 2013-present.</B></LI>
-    <LI><B>Author of 13 books about Mathematical Olympiads.</B></LI>
-    <LI><B>Chair : Academic Committee, Gulf Mathematical Olympiad, 2016-present.</B></LI>
-    </UL>
-</section>
-
-<section>
-    <h2>Links:</h2>
-
-    <div class="links-grid">
-
-        <div class="link-box">
-            <h3>COMPETITIONS</h3>
-            <B>
-            <A HREF="https://www.imo-official.org/">IMO</A>,   <A HREF="https://artofproblemsolving.com/community">AoPS</A>,<BR>
-            <A HREF="https://moresults.org/">Math Olympiad Results </A>,<BR>
-            <A HREF="https://mathnet.mit.edu/">Olympiad Problems</A>, <BR>
-            <A HREF="https://kskedlaya.org/putnam-archive/">Putnam</A>, <A HREF="https://vjimc.osu.cz/">VJIMC</A>,<BR>
-            <A HREF="https://www.imc-math.org.uk/">IMC</A>, <A HREF="https://www.georgmohr.dk/nmcperm/">Nordic</A>, <A HREF="https://www.turgor.ru/en/">TT</A>,
-            <A HREF="https://www.math.u-szeged.hu/~mmaroti/schweitzer/">MSMC</A>,<BR>
-            <A HREF="https://www.pamoofficial.org/">PAMO</A>, <A HREF="https://bxmo.org/">BxMO</A>, <A HREF="https://www.apmo-official.org/">APMO</A>, <A HREF="https://www.egmo.org/">EGMO</A>,<BR>
-            <A HREF="https://emo2026.lt/">EMO</A>, <A HREF="https://www.memo-official.org/MEMO/">MEMO</A>, <A HREF="https://emc.mnm.hr/">EMC</A>, <A HREF="https://rmms.lbi.ro/rmm2026/index.php?id=home">RMM</A><BR>
-            </B>
-        </div>
-
-        <div class="link-box">
-            <h3>JOURNALS</h3>
-            <B>
-            <A HREF="https://mathscinet.ams.org/dmr/JournalList.html">Math Journals</A>, <A HREF="https://annals.math.princeton.edu/">Annals</A>,
-            <A HREF="https://pubs.ams.org/journals/jams/">JAMS</A>,<BR>
-            <A HREF="https://portail.math.cnrs.fr/doc">Periodicals</A>, <A HREF="https://link.springer.com/journal/222/volumes-and-issues">Inventiones</A>,
-            <A HREF="https://intlpress.com/journals/journalList?id=1804409921462136833">Acta</A>,<BR>
-            <A HREF="https://arxiv.org/list/math/recent">arXiv</A>, <A HREF="https://www.numdam.org/">Numdam</A>, <A HREF="https://www.ssma.org/solutions-problem-section">SSMJ</A>,<BR>
-            <A HREF="https://cms.math.ca/publications/crux/">Crux Mathematicorum</A>,<BR>
-            <A HREF="https://www.komal.hu/oldal?home=">Komal</A>, <A HREF="https://www.kvant.digital/">Kvant</A>, <A HREF="https://www.wfnmc.org/journal.html">WFNMC</A>,<BR>
-            <A HREF="https://ssmr.ro/publicatii/gmb/volume_gmb">Gazeta Matematica</A>, <A HREF="http://recreatiimatematice.ro/">Recreatii</A>,<BR>
-            <A HREF="https://gaceta.rsme.es/">Gaceta de la RSME</A><BR>
-            </B>
-        </div>
-
-        <div class="link-box">
-            <h3>LATEX</h3>
-            <B>
-            <A HREF="https://fr.overleaf.com/">Overleaf</A><BR>
-            <A HREF="https://miktex.org/">MikTeX</A><BR>
-            <A HREF="https://www.wolframalpha.com/examples/mathematics">WolframAlpha</A><BR>
-            <A HREF="https://tex.stackexchange.com/?utm_source=chatgpt.com">TeX Stack Exchange</A><BR>
-            <A HREF="https://ctan.org/?utm_source=chatgpt.com">CTAN</A><BR>
-            <A HREF="https://ctan.org/pkg/pgf?utm_source=chatgpt.com">Tikz PGF</A><BR>
-            <A HREF="https://www.gutenberg-asso.fr/">Gutenberg</A><BR>
-            </B>
-        </div>
-
-        <div class="link-box">
-            <h3>MATHEMATICS</h3>
-            <B>
-            <A HREF="https://mathshistory.st-andrews.ac.uk/">History of Mathematics</A><BR>
-            <A HREF="http://www.numbertheory.org/math_depts.html">Math. Dept. and Societies</A><BR>
-            <A HREF="http://www.claymath.org">Clay Math. Institute</A><BR>
-            <A HREF="https://faculty.evansville.edu/ck6/encyclopedia/etc.html">Triangle Centers </A><BR>
-            <A HREF="https://oeis.org/">Integer sequences</A><BR>
-            <A HREF="https://mathoverflow.net/">MathOverflow</A><BR>
-            <A HREF="https://math.stackexchange.com/?utm_source=chatgpt.com">Math Stack Exchange</A><BR>
-            </B>
-        </div>
-
+  <section id="olympiads">
+    <h2>Mathematical olympiad activities</h2>
+    <div class="olymp">
+      <div class="card">
+        <ul class="roles">
+          <li><b>Chair, Academic Committee</b>, Gulf Mathematical Olympiad<small>2016 – present</small></li>
+          <li><b>Editor</b>, <a href="https://www.mathproblems-ks.org/">Math Problems Journal</a><small>2013 – present</small></li>
+          <li><b>Assistant to the Editor-in-Chief</b>, <a href="https://cms.math.ca/publications/crux/">Crux Mathematicorum with Mathematical Mayhem</a>, <a href="https://cms.math.ca/">Canadian Mathematical Society</a><small>1998 – 2009</small></li>
+          <li><b>Reviewer</b>, <a href="https://maa.org/book_category/problem-book/">MAA Problem Book Series</a>, <a href="https://maa.org/">Mathematical Association of America</a></li>
+          <li><b>Author of 13 books</b> on mathematical olympiads</li>
+        </ul>
+      </div>
+      <div class="card">
+        <p style="margin:0">More than <b>600 problems and solutions</b> published in international problem-solving journals, including:</p>
+        <ul class="journals">
+          <li><a href="https://maa.org/publication/the-american-mathematical-monthly/">American Mathematical Monthly <span class="c">USA</span></a></li>
+          <li><a href="https://maa.org/publication/college-mathematics-journal/">College Mathematics Journal <span class="c">USA</span></a></li>
+          <li><a href="https://maa.org/publication/mathematics-magazine/">Mathematics Magazine <span class="c">USA</span></a></li>
+          <li><a href="https://cms.math.ca/publications/crux/">Crux Mathematicorum <span class="c">Canada</span></a></li>
+          <li><a href="https://ems.press/journals/em">Elemente der Mathematik <span class="c">Switzerland</span></a></li>
+          <li><a href="https://www.nieuwarchief.nl/">Nieuw Archief voor Wiskunde <span class="c">Netherlands</span></a></li>
+          <li><a href="https://www.awesomemath.org/mathematical-reflections/">Mathematical Reflections <span class="c">USA</span></a></li>
+          <li><a href="https://www.math.hkust.edu.hk/excalibur/">Mathematical Excalibur <span class="c">Hong Kong</span></a></li>
+          <li><a href="https://www.mathproblems-ks.org/">Math Problems Journal</a></li>
+          <li><a>Samasya <span class="c">India</span></a></li>
+          <li><a href="https://octogon.online/">Octogon <span class="c">Romania</span></a></li>
+          <li><a href="https://www.quadrature-mag.fr/">Quadrature <span class="c">France</span></a></li>
+          <li><a href="https://afdm.apmep.fr/">Bulletin de l'APMEP <span class="c">France</span></a></li>
+          <li><a href="https://www.rms-math.com/">Revue de Mathématiques Spéciales <span class="c">France</span></a></li>
+          <li><a href="https://www.tandfonline.com/journals/ufbq20">The Fibonacci Quarterly <span class="c">USA</span></a></li>
+          <li><a href="https://www.tandfonline.com/journals/tmgz20">The Mathematical Gazette <span class="c">UK</span></a></li>
+        </ul>
+      </div>
     </div>
-</section>
+  </section>
+
+  <section id="links">
+    <h2>Useful links</h2>
+    <input class="search" type="search" id="filter" placeholder="Filter links…" aria-label="Filter links">
+
+    <div class="link-grid">
+      <div class="link-box card">
+        <h3>Competitions</h3>
+        <ul>
+          <li><a href="https://www.imo-official.org/">IMO</a></li>
+          <li><a href="https://artofproblemsolving.com/community">AoPS</a></li>
+          <li><a href="https://moresults.org/">Math Olympiad Results</a></li>
+          <li><a href="https://mathnet.mit.edu/">Olympiad Problems (MathNet)</a></li>
+          <li><a href="https://kskedlaya.org/putnam-archive/">Putnam</a></li>
+          <li><a href="https://vjimc.osu.cz/">VJIMC</a></li>
+          <li><a href="https://www.imc-math.org.uk/">IMC</a></li>
+          <li><a href="https://www.georgmohr.dk/nmcperm/">Nordic</a></li>
+          <li><a href="https://www.turgor.ru/en/">Tournament of Towns</a></li>
+          <li><a href="https://www.math.u-szeged.hu/~mmaroti/schweitzer/">Miklós Schweitzer</a></li>
+          <li><a href="https://www.pamoofficial.org/">PAMO</a></li>
+          <li><a href="https://bxmo.org/">BxMO</a></li>
+          <li><a href="https://www.apmo-official.org/">APMO</a></li>
+          <li><a href="https://www.egmo.org/">EGMO</a></li>
+          <li><a href="https://emo2026.lt/">EMO</a></li>
+          <li><a href="https://www.memo-official.org/MEMO/">MEMO</a></li>
+          <li><a href="https://emc.mnm.hr/">EMC</a></li>
+          <li><a href="https://rmms.lbi.ro/rmm2026/index.php?id=home">RMM</a></li>
+        </ul>
+      </div>
+
+      <div class="link-box card">
+        <h3>Journals</h3>
+        <ul>
+          <li><a href="https://mathscinet.ams.org/dmr/JournalList.html">Math Journals (MathSciNet)</a></li>
+          <li><a href="https://annals.math.princeton.edu/">Annals of Mathematics</a></li>
+          <li><a href="https://pubs.ams.org/journals/jams/">JAMS</a></li>
+          <li><a href="https://portail.math.cnrs.fr/doc">Periodicals (CNRS)</a></li>
+          <li><a href="https://link.springer.com/journal/222/volumes-and-issues">Inventiones</a></li>
+          <li><a href="https://intlpress.com/journals/journalList?id=1804409921462136833">Acta Mathematica</a></li>
+          <li><a href="https://arxiv.org/list/math/recent">arXiv (math)</a></li>
+          <li><a href="https://www.numdam.org/">Numdam</a></li>
+        </ul>
+        <h3 style="margin-top:18px">Problem journals</h3>
+        <ul>
+          <li><a href="https://cms.math.ca/publications/crux/">Crux Mathematicorum</a></li>
+          <li><a href="https://www.ssma.org/solutions-problem-section">SSMJ</a></li>
+          <li><a href="https://www.komal.hu/oldal?home=">KöMaL</a></li>
+          <li><a href="https://www.kvant.digital/">Kvant</a></li>
+          <li><a href="https://www.wfnmc.org/journal.html">WFNMC</a></li>
+          <li><a href="https://ssmr.ro/publicatii/gmb/volume_gmb">Gazeta Matematică</a></li>
+          <li><a href="http://recreatiimatematice.ro/">Recreații Matematice</a></li>
+          <li><a href="https://gaceta.rsme.es/">Gaceta de la RSME</a></li>
+        </ul>
+      </div>
+
+      <div class="link-box card">
+        <h3>LaTeX &amp; tools</h3>
+        <ul>
+          <li><a href="https://fr.overleaf.com/">Overleaf</a></li>
+          <li><a href="https://miktex.org/">MiKTeX</a></li>
+          <li><a href="https://tex.stackexchange.com/">TeX Stack Exchange</a></li>
+          <li><a href="https://ctan.org/">CTAN</a></li>
+          <li><a href="https://ctan.org/pkg/pgf">TikZ / PGF</a></li>
+          <li><a href="https://www.gutenberg-asso.fr/">GUTenberg</a></li>
+          <li><a href="https://www.wolframalpha.com/examples/mathematics">WolframAlpha</a></li>
+        </ul>
+      </div>
+
+      <div class="link-box card">
+        <h3>Mathematics</h3>
+        <ul>
+          <li><a href="https://mathshistory.st-andrews.ac.uk/">History of Mathematics</a></li>
+          <li><a href="https://www.numbertheory.org/math_depts.html">Math. Departments &amp; Societies</a></li>
+          <li><a href="https://www.claymath.org/">Clay Mathematics Institute</a></li>
+          <li><a href="https://faculty.evansville.edu/ck6/encyclopedia/etc.html">Encyclopedia of Triangle Centers</a></li>
+          <li><a href="https://oeis.org/">OEIS — Integer Sequences</a></li>
+          <li><a href="https://mathoverflow.net/">MathOverflow</a></li>
+          <li><a href="https://math.stackexchange.com/">Math Stack Exchange</a></li>
+        </ul>
+      </div>
+    </div>
+  </section>
 
 </main>
 
 <footer>
-    <p>Last modified on Saturday, May 30th, 2026.</p>
-    <div id="clock"></div>
-    <div id="sfcstnxmu6jsz7jja79tn1d9csa8bpjg4je"></div>
-    <script type="text/javascript" src="https://counter11.optistats.ovh/private/counter.js?c=stnxmu6jsz7jja79tn1d9csa8bpjg4je&down=async" async></script>
-    <!-- <br>
-    <a href="https://www.compteurdevisite.com">compteur gratuit pour blog</a>
-    <noscript>
-      <a href="https://www.compteurdevisite.com" title="compteur gratuit pour blog">
-        <img src="https://counter11.optistats.ovh/private/compteurdevisite.php?c=stnxmu6jsz7jja79tn1d9csa8bpjg4je" border="0" title="compteur gratuit pour blog" alt="compteur gratuit pour blog">
-      </a>
-    </noscript> -->
+  <div class="wrap">
+    <span>© 2026 Mohammed Aassila</span>
+    <span class="visits">Visitors: <span id="sfcstnxmu6jsz7jja79tn1d9csa8bpjg4je"></span></span>
+    <span>Last modified: <time datetime="2026-10-26">October 26, 2026</time></span>
+  </div>
+  <!-- Compteur de visites (votre compte optistats habituel) -->
+  <script src="https://counter11.optistats.ovh/private/counter.js?c=stnxmu6jsz7jja79tn1d9csa8bpjg4je&amp;down=async" async></script>
 </footer>
 
 <script>
-function updateClock(){
-    const now = new Date();
-
-    const time = now.toLocaleTimeString('en-US',{
-        hour:'numeric',
-        minute:'2-digit',
-        second:'2-digit'
+  // Filtre instantané des liens
+  document.getElementById('filter').addEventListener('input', function () {
+    const q = this.value.trim().toLowerCase();
+    document.querySelectorAll('.link-box').forEach(function (box) {
+      let visible = 0;
+      box.querySelectorAll('li').forEach(function (li) {
+        const match = li.textContent.toLowerCase().includes(q);
+        li.classList.toggle('hidden', !match);
+        if (match) visible++;
+      });
+      box.style.display = visible ? '' : 'none';
     });
-
-    document.getElementById('clock').textContent = time;
-}
-
-setInterval(updateClock,1000);
-updateClock();
-
+  });
 </script>
 
 </body>
